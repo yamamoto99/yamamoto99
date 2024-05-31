@@ -1,5 +1,12 @@
 ### Hi there 👋
 
+
+
+<!--
+[![yamamoto99's GitHub stats](https://github-readme-stats.vercel.app/api?username=yamamoto99&show_icons=true&theme=midnight-purple)](https://github.com/yamamoto99/github-readme-stats)
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=yamamoto99&theme=midnight-purple&hide=jupyter%20notebook,html,css)](https://github.com/yamamoto99/github-readme-stats)
+-->
 <!--
 **yamamoto99/yamamoto99** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
