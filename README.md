@@ -1,7 +1,8 @@
 ### Hi there 👋
 
-
-
+<!--
+[![trophy](https://github-profile-trophy.vercel.app/?username=yamamoto99)](https://github.com/yamamoto99/github-profile-trophy)
+-->
 <!--
 [![yamamoto99's GitHub stats](https://github-readme-stats.vercel.app/api?username=yamamoto99&show_icons=true&theme=midnight-purple)](https://github.com/yamamoto99/github-readme-stats)
 
