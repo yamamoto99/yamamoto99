@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=40&center=true&vCenter=true&width=500&height=100&duration=4000&lines=Hi+There!+👋;+I'm+Masato+Yamamoto!;" />
+    <img src="https://readme-typing-svg.herokuapp.com/?font=Monaspace&size=40&center=true&vCenter=true&width=500&height=100&duration=4000&lines=Hi+There!+👋;+I'm+Masato+Yamamoto!;" />
 </h1>
 
 ## GitHub Profile Summary Cards
