@@ -1,4 +1,6 @@
-# Hi there 👋
+<h1 align="center">
+    <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=40&center=true&vCenter=true&width=500&height=100&duration=4000&lines=Hi+There!+👋;+I'm+Masato+Yamamoto!;" />
+</h1>
 
 ## GitHub Profile Summary Cards
 ![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=yamamoto99&count_private=true&theme=github_dark)
