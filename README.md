@@ -14,5 +14,5 @@
 <h2 align="center">🏆 GitHub Profile Trophy 🏆</h2>
 <br/>
 <div align="center">
-    <img src="https://github-profile-trophy.vercel.app/?username=yamamoto99"/>
+    <img src="https://github-profile-trophy.vercel.app/?username=yamamoto99&rank=-?&theme=darkhub"/>
 </div>
