@@ -5,8 +5,8 @@
 <h2 align="center">⚒️ Languages-Frameworks-Tools ⚒️</h2>
 <br/>
 <div align="center">
-    <img src="https://skillicons.dev/icons?i=html,css,tailwind,js,typescript,nodejs"/><br>
-    <img src="https://skillicons.dev/icons?i=c,cpp,java,python,flask,go"/><br>
+    <img src="https://skillicons.dev/icons?i=html,css,tailwind,js,typescript"/><br>
+    <img src="https://skillicons.dev/icons?i=c,cpp,java,nodejs,python,flask,go"/><br>
     <img src="https://skillicons.dev/icons?i=firebase,sqlite,mysql,postgres,supabase,mongodb"/><br>
     <img src="https://skillicons.dev/icons?i=aws,figma,git,github,githubactions,docker,terraform"/><br>
 </div>
