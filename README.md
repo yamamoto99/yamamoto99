@@ -2,6 +2,15 @@
     <img src="https://readme-typing-svg.herokuapp.com/?font=Monaspace&size=40&center=true&vCenter=true&width=500&height=100&duration=4000&lines=Hi+There!+👋;+I'm+Masato+Yamamoto!;" />
 </h1>
 
+<h2 align="center">⚒️ Languages-Frameworks-Tools ⚒️</h2>
+<br/>
+<div align="center">
+    <img src="https://skillicons.dev/icons?i=html,css,tailwind,js,typescript,nodejs"/><br>
+    <img src="https://skillicons.dev/icons?i=c,cpp,java,python,flask,go"/><br>
+    <img src="https://skillicons.dev/icons?i=firebase,sqlite,mysql,postgres,supabase,mongodb"/><br>
+    <img src="https://skillicons.dev/icons?i=aws,figma,git,github,githubactions,docker,terraform"/><br>
+</div>
+
 <h2 align="center">📚 GitHub Profile Summary Cards 📚</h2>
 <br/>
 <div align="center">
