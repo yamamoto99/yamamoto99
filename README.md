@@ -10,6 +10,7 @@
     <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=yamamoto99&count_private=true&theme=github_dark"/>
 <!--     <img src="http://github-profile-summary-cards.vercel.app/api/cards/stats?username=yamamoto99&theme=github_dark"/> -->
 </div>
+<br/>
 
 <h2 align="center">⚒️ Languages-Frameworks-Tools ⚒️</h2>
 <br/>
@@ -19,7 +20,7 @@
     <img src="https://skillicons.dev/icons?i=firebase,sqlite,mysql,postgres,supabase,mongodb"/><br>
     <img src="https://skillicons.dev/icons?i=aws,figma,git,github,githubactions,docker,terraform"/><br>
 </div>
-
+<br/>
 
 <h2 align="center">🏆 GitHub Profile Trophy 🏆</h2>
 <br/>
