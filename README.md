@@ -18,7 +18,7 @@
     <img src="https://skillicons.dev/icons?i=html,css,tailwind,js,typescript"/><br>
     <img src="https://skillicons.dev/icons?i=c,cpp,java,nodejs,python,flask,go"/><br>
     <img src="https://skillicons.dev/icons?i=firebase,sqlite,mysql,postgres,supabase,mongodb"/><br>
-    <img src="https://skillicons.dev/icons?i=aws,figma,git,github,githubactions,docker,terraform"/><br>
+    <img src="https://skillicons.dev/icons?i=aws,figma,git,github,githubactions,docker,terraform,postman"/><br>
 </div>
 <br/>
 
