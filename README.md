@@ -23,8 +23,8 @@
 <div align="center">
     <img src="https://skillicons.dev/icons?i=html,css,tailwind,js,typescript,react"/><br>
     <img src="https://skillicons.dev/icons?i=c,cpp,flask,go,rails"/><br>
-    <img src="https://skillicons.dev/icons?i=firebase,sqlite,mysql,postgres,supabase,mongodb"/><br>
-    <img src="https://skillicons.dev/icons?i=aws,figma,git,github,githubactions,docker,terraform,postman"/><br>
+    <img src="https://skillicons.dev/icons?i=firebase,sqlite,mysql,postgres,supabase"/><br>
+    <img src="https://skillicons.dev/icons?i=aws,git,githubactions,docker,terraform"/><br>
 </div>
 <br/>
 
