@@ -21,10 +21,8 @@
 <h2 align="center">⚒️ Languages-Frameworks-Tools ⚒️</h2>
 <br/>
 <div align="center">
-    <img src="https://skillicons.dev/icons?i=html,css,tailwind,js,typescript,react"/><br>
-    <img src="https://skillicons.dev/icons?i=c,cpp,flask,go,rails"/><br>
-    <img src="https://skillicons.dev/icons?i=firebase,sqlite,mysql,postgres,supabase"/><br>
-    <img src="https://skillicons.dev/icons?i=aws,git,githubactions,docker,terraform"/><br>
+    <img src="https://skillicons.dev/icons?i=html,css,tailwind,js,typescript,react,c,flask,go,rails"/><br>
+    <img src="https://skillicons.dev/icons?i=firebase,sqlite,postgres,aws,git,githubactions,docker,terraform"/><br>
 </div>
 <br/>
 
