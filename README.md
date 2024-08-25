@@ -28,6 +28,3 @@
     <img src="https://github-profile-trophy.vercel.app/?username=yamamoto99&rank=-?&theme=darkhub"/>
 </div>
 
-<div align="center">
-    <img src="https://github-sns-profile-card-e53bc5obaa-an.a.run.app/svg?platform=zenn&userid=yamamoto99"/>
-</div>
