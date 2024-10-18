@@ -15,7 +15,7 @@ jobs:
           TOKEN: ${{ secrets.TOKEN }}
         run: |
           # Define the JSON payload using a here-doc (EOF block) to avoid issues with quotes
-          JSON_PAYLOAD=$(cat <<EOF
+          JSON_PAYLOAD=$(cat << 'EOF'
           {
             "messages": [
               {
