@@ -37,5 +37,5 @@ jobs:
           # AIのレスポンスをコメントとしてプルリクエストに投稿
           curl -H "Authorization: token $TOKEN" \
               -H "Accept: application/vnd.github.v3+json" \
-              -d '{"event":"COMMENT","body":'"$(echo "$AI_RESPONSE" | jq -R .)"'}' \
+              -d '{"event":"COMMENT","body":'"$(echo "$AI_RESPONSE" | jq -R .)"}' \
               https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/reviews
