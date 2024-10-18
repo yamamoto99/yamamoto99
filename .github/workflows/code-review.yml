@@ -21,10 +21,23 @@ jobs:
           # JSONエスケープ
           ESCAPED_FILES=$(echo "$FILES" | jq -R . | jq -s .)
 
-          # ファイルの変更点をAIに渡してレビューコメントを生成 (ここでAIのAPIを使用)
-          AI_RESPONSE=$(curl -X POST "https://api.example.com/review" \
+          # ファイルの変更点をAIに渡してレビューコメントを生成
+          AI_RESPONSE=$(curl -X POST "https://models.inference.ai.azure.com/chat/completions" \
                               -H "Content-Type: application/json" \
-                              -d '{"files": '"$ESCAPED_FILES"'}')
+                              -H "Authorization: Bearer $TOKEN" \
+                              -d '{
+                                  "messages": [
+                                      {
+                                          "role": "system",
+                                          "content": "You are a helpful assistant."
+                                      },
+                                      {
+                                          "role": "user",
+                                          "content": "Please review the following code changes: '"$ESCAPED_FILES"'"
+                                      }
+                                  ],
+                                  "model": "gpt-4o"
+                              }')
 
           # AIのレスポンスをコメントとしてプルリクエストに投稿
           curl -H "Authorization: token $TOKEN" \
