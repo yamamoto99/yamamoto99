@@ -37,7 +37,10 @@ jobs:
                                       }
                                   ],
                                   "model": "gpt-4o"
-                              }' | jq -r '.choices[0].message.content')
+                              }')
+
+          # AIのレスポンスを出力
+          echo "AI Response: $AI_RESPONSE"
 
           # AIのレスポンスをコメントとしてプルリクエストに投稿
           curl -H "Authorization: token $TOKEN" \
