@@ -32,7 +32,7 @@ jobs:
                                 },
                                 {
                                     "role": "user",
-                                    "content": "Please perform a code review of the following pull request changes: '"$PR_CHANGES"'"
+                                    "content": "Please perform a code review of the following pull request changes: "'"$PR_CHANGES"'""
                                 }
                             ],
                             "temperature": 1.0,
