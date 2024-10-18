@@ -13,12 +13,6 @@ jobs:
         env:
           TOKEN: ${{ secrets.TOKEN }}
         run: |
-          # ファイルの変更点を取得
-          FILES=$(curl -H "Authorization: token $TOKEN" \
-                      -H "Accept: application/vnd.github.v3+json" \
-                      https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/files)
-          # JSONエスケープ
-          ESCAPED_FILES=$(echo "$FILES" | jq -R . | jq -s .)
           # ファイルの変更点をAIに渡してレビューコメントを生成
           AI_RESPONSE=$(curl -X POST "https://models.inference.ai.azure.com/chat/completions" \
                         -H "Content-Type: application/json" \
@@ -38,10 +32,10 @@ jobs:
                             "top_p": 1.0,
                             "max_tokens": 1000,
                             "model": "gpt-4o"
-                        }')
+                        }' | jq -r '.choices[0].message.content')
+                      }')
           # AIのレスポンスをコメントとしてプルリクエストに投稿
           curl -H "Authorization: token $TOKEN" \
               -H "Accept: application/vnd.github.v3+json" \
-              -d '{"event":"COMMENT","body":'"$AI_RESPONSE"'}' \
               -d '{"event":"COMMENT","body":'"$(echo "$AI_RESPONSE" | jq -R .)"'}' \
               https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/reviews
