@@ -14,6 +14,12 @@ jobs:
         env:
           TOKEN: ${{ secrets.TOKEN }}
         run: |
+          # Get the pull request changes
+          PR_CHANGES=$(curl -X GET "https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.number }}/files" \
+             -H "Authorization: token $TOKEN" | jq -r '.[].patch')
+
+          echo "PR changes: @@@ $PR_CHANGES @@@"
+
           # Send the API request and capture the AI's response
           AI_RESPONSE=$(curl -X POST "https://models.inference.ai.azure.com/chat/completions" \
                         -H "Content-Type: application/json" \
@@ -26,7 +32,7 @@ jobs:
                                 },
                                 {
                                     "role": "user",
-                                    "content": "What is the capital of France?"
+                                    "content": "Please perform a code review of the following pull request changes: '"$PR_CHANGES"'"
                                 }
                             ],
                             "temperature": 1.0,
@@ -38,7 +44,7 @@ jobs:
           # Extract the content field from the AI response
           CONTENT=$(echo $AI_RESPONSE | jq -r '.choices[0].message.content')
 
-          echo "AI response content: $CONTENT"
+          echo "AI response content: !!!!!! $CONTENT !!!!!"
 
           # Post the content as a comment on the pull request
           PR_NUMBER=$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
