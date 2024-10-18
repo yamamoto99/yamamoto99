@@ -1,0 +1,48 @@
+name: Code Review
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  code-review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run code review
+        env:
+          TOKEN: ${{ secrets.TOKEN }}
+        run: |
+          # Send the API request and capture the AI's response
+          AI_RESPONSE=$(curl -X POST "https://models.inference.ai.azure.com/chat/completions" \
+                        -H "Content-Type: application/json" \
+                        -H "Authorization: Bearer $TOKEN" \
+                        -d '{
+                            "messages": [
+                                {
+                                    "role": "system",
+                                    "content": "You are a helpful assistant."
+                                },
+                                {
+                                    "role": "user",
+                                    "content": "What is the capital of France?"
+                                }
+                            ],
+                            "temperature": 1.0,
+                            "top_p": 1.0,
+                            "max_tokens": 1000,
+                            "model": "gpt-4o"
+                        }')
+          
+          # Extract the content field from the AI response
+          CONTENT=$(echo $AI_RESPONSE | jq -r '.choices[0].message.content')
+
+          echo "AI response content: $CONTENT"
+
+          # Post the content as a comment on the pull request
+          PR_NUMBER=$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
+          curl -X POST "https://api.github.com/repos/${{ github.repository }}/issues/$PR_NUMBER/comments" \
+               -H "Authorization: token $TOKEN" \
+               -H "Content-Type: application/json" \
+               -d "{\"body\": \"$CONTENT\"}"
