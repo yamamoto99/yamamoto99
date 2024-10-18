@@ -19,7 +19,7 @@ jobs:
                       https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/files)
 
           # JSONエスケープ
-          ESCAPED_FILES=$(echo "$FILES" | jq -R . | jq -s .)
+          ESCAPED_FILES=$(echo "$FILES" | jq -c .)
 
           echo "fefe: $ESCAPED_FILES"
 
@@ -27,19 +27,22 @@ jobs:
           AI_RESPONSE=$(curl -X POST "https://models.inference.ai.azure.com/chat/completions" \
                               -H "Content-Type: application/json" \
                               -H "Authorization: Bearer $TOKEN" \
-                              -d '{
-                                  "messages": [
-                                      {
-                                          "role": "system",
-                                          "content": "You are a helpful assistant."
-                                      },
-                                      {
-                                          "role": "user",
-                                          "content": "Please review the following code changes: '"$ESCAPED_FILES"'"
-                                      }
-                                  ],
-                                  "model": "gpt-4o"
-                              }')
+                              -d @- <<EOF
+{
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful assistant."
+    },
+    {
+      "role": "user",
+      "content": "Please review the following code changes: $ESCAPED_FILES"
+    }
+  ],
+  "model": "gpt-4o"
+}
+EOF
+          )
 
           # AIのレスポンスを出力
           echo "AI Response: $AI_RESPONSE"
@@ -47,5 +50,10 @@ jobs:
           # AIのレスポンスをコメントとしてプルリクエストに投稿
           curl -H "Authorization: token $TOKEN" \
               -H "Accept: application/vnd.github.v3+json" \
-              -d '{"event":"COMMENT","body":'"$(echo "$AI_RESPONSE" | jq -R .)"'}' \
+              -d @- <<EOF
+{
+  "event": "COMMENT",
+  "body": $AI_RESPONSE
+}
+EOF
               https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/reviews
