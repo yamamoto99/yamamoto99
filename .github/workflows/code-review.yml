@@ -21,6 +21,8 @@ jobs:
           # JSONエスケープ
           ESCAPED_FILES=$(echo "$FILES" | jq -R . | jq -s .)
 
+          echo "fefe: $ESCAPED_FILES"
+
           # ファイルの変更点をAIに渡してレビューコメントを生成
           AI_RESPONSE=$(curl -X POST "https://models.inference.ai.azure.com/chat/completions" \
                               -H "Content-Type: application/json" \
