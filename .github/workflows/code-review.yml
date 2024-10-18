@@ -14,33 +14,26 @@ jobs:
         env:
           TOKEN: ${{ secrets.TOKEN }}
         run: |
-          # Define the JSON payload using a here-doc (EOF block) to avoid issues with quotes
-          JSON_PAYLOAD=$(cat << 'EOF'
-          {
-            "messages": [
-              {
-                "role": "system",
-                "content": "You are a helpful assistant."
-              },
-              {
-                "role": "user",
-                "content": "What is the capital of France?"
-              }
-            ],
-            "temperature": 1.0,
-            "top_p": 1.0,
-            "max_tokens": 1000,
-            "model": "gpt-4o"
-          }
-EOF
-          )
-
           # Send the API request and capture the AI's response
           AI_RESPONSE=$(curl -X POST "https://models.inference.ai.azure.com/chat/completions" \
                         -H "Content-Type: application/json" \
                         -H "Authorization: Bearer $TOKEN" \
-                        -d "$JSON_PAYLOAD" | jq -r '.choices[0].message.content')
-
+                        -d '{
+                            "messages": [
+                                {
+                                    "role": "system",
+                                    "content": "You are a helpful assistant."
+                                },
+                                {
+                                    "role": "user",
+                                    "content": "What is the capital of France?"
+                                }
+                            ],
+                            "temperature": 1.0,
+                            "top_p": 1.0,
+                            "max_tokens": 1000,
+                            "model": "gpt-4o"
+                        }')
           # Post the AI response as a comment on the pull request
           curl -H "Authorization: token $TOKEN" \
               -H "Accept: application/vnd.github.v3+json" \
