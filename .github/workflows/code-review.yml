@@ -21,21 +21,24 @@ jobs:
           ESCAPED_FILES=$(echo "$FILES" | jq -R . | jq -s .)
           # ファイルの変更点をAIに渡してレビューコメントを生成
           AI_RESPONSE=$(curl -X POST "https://models.inference.ai.azure.com/chat/completions" \
-                              -H "Content-Type: application/json" \
-                              -H "Authorization: Bearer $TOKEN" \
-                              -d '{
-                                  "messages": [
-                                      {
-                                          "role": "system",
-                                          "content": "You are a helpful assistant."
-                                      },
-                                      {
-                                          "role": "user",
-                                          "content": "こんにちは"
-                                      }
-                                  ],
-                                  "model": "gpt-4o"
-                              }')
+                        -H "Content-Type: application/json" \
+                        -H "Authorization: Bearer $TOKEN" \
+                        -d '{
+                            "messages": [
+                                {
+                                    "role": "system",
+                                    "content": "You are a helpful assistant."
+                                },
+                                {
+                                    "role": "user",
+                                    "content": "What is the capital of France?"
+                                }
+                            ],
+                            "temperature": 1.0,
+                            "top_p": 1.0,
+                            "max_tokens": 1000,
+                            "model": "gpt-4o"
+                        }')
           # AIのレスポンスをコメントとしてプルリクエストに投稿
           curl -H "Authorization: token $TOKEN" \
               -H "Accept: application/vnd.github.v3+json" \
