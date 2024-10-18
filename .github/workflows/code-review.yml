@@ -36,7 +36,7 @@ jobs:
     },
     {
       "role": "user",
-      "content": "Please review the following code changes: $ESCAPED_FILES"
+      "content": "こんにちはと返して"
     }
   ],
   "model": "gpt-4o"
