@@ -18,7 +18,7 @@ jobs:
           PR_CHANGES=$(curl -X GET "https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.number }}/files" \
                         -H "Authorization: token $TOKEN")
 
-          echo "PR changes: $PR_CHANGES"
+          echo "PR changes: @@@ $PR_CHANGES @@@"
 
           # Send the API request and capture the AI's response
           AI_RESPONSE=$(curl -X POST "https://models.inference.ai.azure.com/chat/completions" \
