@@ -35,4 +35,7 @@ jobs:
                             "model": "gpt-4o"
                         }')
           
-          echo "AI response: $AI_RESPONSE"
+          # Extract the content field from the AI response
+          CONTENT=$(echo $AI_RESPONSE | jq -r '.choices[0].message.content')
+
+          echo "AI response content: $CONTENT"
