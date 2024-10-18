@@ -44,7 +44,7 @@ jobs:
           # Extract the content field from the AI response
           CONTENT=$(echo $AI_RESPONSE | jq -r '.choices[0].message.content')
 
-          echo "AI response content: $CONTENT"
+          echo "AI response content: !!!!!! $CONTENT !!!!!"
 
           # Post the content as a comment on the pull request
           PR_NUMBER=$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
