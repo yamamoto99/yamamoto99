@@ -16,7 +16,7 @@ jobs:
         run: |
           # Get the pull request changes
           PR_CHANGES=$(curl -X GET "https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.number }}/files" \
-             -H "Authorization: token $TOKEN" | jq -r '.[].patch')
+             -H "Authorization: token $TOKEN" | jq -r '.[].patch' | tr -d '\n')
 
           echo "PR changes: @@@ $PR_CHANGES @@@"
 
@@ -28,7 +28,7 @@ jobs:
                             "messages": [
                                 {
                                     "role": "system",
-                                    "content": "You are a helpful assistant."
+                                    "content": "Gitのdiffを読み込んでコードレビューを行ってください。この変更点の意図やコードの改善点、潜在的なバグや問題がないか確認し、具体的なフィードバックをお願いします。"
                                 },
                                 {
                                     "role": "user",
