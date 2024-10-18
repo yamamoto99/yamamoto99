@@ -33,7 +33,6 @@ jobs:
                             "max_tokens": 1000,
                             "model": "gpt-4o"
                         }' | jq -r '.choices[0].message.content')
-                      }')
           # AIのレスポンスをコメントとしてプルリクエストに投稿
           curl -H "Authorization: token $TOKEN" \
               -H "Accept: application/vnd.github.v3+json" \
