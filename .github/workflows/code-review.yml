@@ -13,27 +13,31 @@ jobs:
         env:
           TOKEN: ${{ secrets.TOKEN }}
         run: |
-          # ファイルの変更点をAIに渡してレビューコメントを生成
+          # Create JSON payload for the AI API request
+          JSON_PAYLOAD='{
+            "messages": [
+              {
+                "role": "system",
+                "content": "You are a helpful assistant."
+              },
+              {
+                "role": "user",
+                "content": "What is the capital of France?"
+              }
+            ],
+            "temperature": 1.0,
+            "top_p": 1.0,
+            "max_tokens": 1000,
+            "model": "gpt-4o"
+          }'
+
+          # Send request to AI API and store the response
           AI_RESPONSE=$(curl -X POST "https://models.inference.ai.azure.com/chat/completions" \
                         -H "Content-Type: application/json" \
                         -H "Authorization: Bearer $TOKEN" \
-                        -d '{
-                            "messages": [
-                                {
-                                    "role": "system",
-                                    "content": "You are a helpful assistant."
-                                },
-                                {
-                                    "role": "user",
-                                    "content": "What is the capital of France?"
-                                }
-                            ],
-                            "temperature": 1.0,
-                            "top_p": 1.0,
-                            "max_tokens": 1000,
-                            "model": "gpt-4o"
-                        }' | jq -r '.choices[0].message.content')
-          # AIのレスポンスをコメントとしてプルリクエストに投稿
+                        -d "$JSON_PAYLOAD" | jq -r '.choices[0].message.content')
+
+          # Post the AI's response as a comment on the pull request
           curl -H "Authorization: token $TOKEN" \
               -H "Accept: application/vnd.github.v3+json" \
               -d '{"event":"COMMENT","body":'"$(echo "$AI_RESPONSE" | jq -R .)"}' \
