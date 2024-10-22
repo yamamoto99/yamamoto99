@@ -13,8 +13,12 @@ jobs:
       - uses: kawamataryo/lapras-card-readme@main
         with:
           SHARE_ID: "BTUPJK2"
-          ICON_FIRST: "#000000"
-          ICON_SECOND: "#001eff"
-          BACKGROUND_FIRST: "#474747"
-          BACKGROUND_SECOND: "#000000"
-          LANG: "en"
+          # 以下オプション
+          # https://lapras-card-generator.vercel.app でカスタマイズしたデザインを設定可能
+          # ICON_FIRST: "#030E21"
+          # ICON_SECOND: "#1688BF"
+          # BACKGROUND_FIRST: "#020E27"
+          # BACKGROUND_SECOND: "#0E5593"
+          # LANG: "ja"
+          # CARD_WIDTH: "400"
+          # UPDATE_TIME: "true"
