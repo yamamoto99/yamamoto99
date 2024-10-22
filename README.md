@@ -5,6 +5,8 @@
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/c5aefeb6-602c-4f15-ab92-fbbdded9612d""/>
+    <!--START_SECTION:lapras-card-->
+    <!--END_SECTION:lapras-card-->
     <img src="https://github-sns-profile-card-e53bc5obaa-an.a.run.app/svg?platform=zenn&userid=yamamoto99" alt="Zenn Profile"/>
 </p>
 
