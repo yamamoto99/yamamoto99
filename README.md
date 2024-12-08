@@ -23,8 +23,7 @@
 <h2 align="center">⚒️ Languages-Frameworks-Tools ⚒️</h2>
 <br/>
 <div align="center">
-    <img src="https://skillicons.dev/icons?i=c,go,rails"/><br>
-    <img src="https://skillicons.dev/icons?i=postgres,aws,githubactions,docker,terraform"/><br>
+    <img src="https://skillicons.dev/icons?i=c,go,rails,postgres,aws,githubactions,docker,terraform"/><br>
 </div>
 <br/>
 
