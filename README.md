@@ -36,7 +36,7 @@
 <h2 align="center">🏊‍♂️ 42 Cursus 🏊‍♂️</h2>
 <br/>
 <div align="center">
-  <a href="https://github.com/">
+  <a href="https://github.com/yamamoto99/42cursus">
     <img 
       src="https://github.com/user-attachments/assets/c88f85bf-9ead-4a5b-827a-52f36eaca409" 
       alt="animation art GIF by Alastair Gray" 
