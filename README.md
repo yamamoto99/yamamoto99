@@ -17,14 +17,14 @@
     <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=yamamoto99&count_private=true&theme=github_dark"/>
 </div>
 <br/>
-
+<!--
 <h2 align="center">⚒️ Languages-Frameworks-Tools ⚒️</h2>
 <br/>
 <div align="center">
     <img src="https://skillicons.dev/icons?i=c,go,rails,postgres,aws,gcp,githubactions,docker,terraform"/><br>
 </div>
 <br/>
-
+-->
 <h2 align="center">🏆 GitHub Profile Trophy 🏆</h2>
 <br/>
 <div align="center">
