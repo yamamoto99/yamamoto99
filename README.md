@@ -38,7 +38,7 @@
 <div align="center">
   <a href="https://github.com/yamamoto99/42cursus">
     <img 
-      src="https://github.com/user-attachments/assets/c88f85bf-9ead-4a5b-827a-52f36eaca409" 
+      src="https://github.com/user-attachments/assets/df6ff25a-5e5f-4eaf-b7fa-6bb954073cb1" 
       alt="animation art GIF by Alastair Gray" 
   </a>
 </div>
