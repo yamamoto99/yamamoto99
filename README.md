@@ -24,7 +24,6 @@
     <img src="https://skillicons.dev/icons?i=c,go,rails,postgres,aws,gcp,githubactions,docker,terraform"/><br>
 </div>
 <br/>
--->
 <h2 align="center">🏆 GitHub Profile Trophy 🏆</h2>
 <br/>
 <div align="center">
@@ -32,7 +31,7 @@
 </div>
 <br/>
 <br/>
-
+-->
 <h2 align="center">🏊‍♂️ 42 Cursus 🏊‍♂️</h2>
 <br/>
 <div align="center">
