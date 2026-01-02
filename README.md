@@ -9,26 +9,3 @@
         <img src="https://github-sns-profile-card-e53bc5obaa-an.a.run.app/svg?platform=zenn&userid=yamamoto99" alt="Zenn Profile"/>
     </a>
 </p>
-
-<h2 align="center">📚 GitHub Profile Summary Cards 📚</h2>
-<br/>
-<div align="center">
-    <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=yamamoto99&count_private=true&theme=github_dark"/>
-    <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=yamamoto99&count_private=true&theme=github_dark"/>
-</div>
-<br/>
-<!--
-<h2 align="center">⚒️ Languages-Frameworks-Tools ⚒️</h2>
-<br/>
-<div align="center">
-    <img src="https://skillicons.dev/icons?i=c,go,rails,postgres,aws,gcp,githubactions,docker,terraform"/><br>
-</div>
-<br/>
--->
-<h2 align="center">🏆 GitHub Profile Trophy 🏆</h2>
-<br/>
-<div align="center">
-    <img src="https://github-profile-trophy.vercel.app/?username=yamamoto99&rank=SECRET,SSS,SS,S,AAA,AA,A,B&theme=darkhub"/>
-</div>
-<br/>
-<br/>
